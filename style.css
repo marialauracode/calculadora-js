@@ -4,7 +4,7 @@
     box-sizing: border-box; /*Temos um controle maior com este comando
     em relação aos tamanhos reais dos elementos.
     -> Box-sizing:border-box evita que os elementos fiquem maiores do que o esperado.*/
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -14,7 +14,20 @@ body{
     height: 100vh; /*representa 100% da altura do navegador. Faz com que
     o elemento fique centralizado na tela, respeitando o tamanho do container.*/
     background-color: aliceblue;
+}
 
+.calculadora{
+    background-color: #3b3a3a;
+    border-radius:6px;
+    width: 300px;
+}
+
+.resultado{
+    padding:20px;
+    text-align: right;
+    font-size:2rem;
+    color:white;
+    
 }
 
 
