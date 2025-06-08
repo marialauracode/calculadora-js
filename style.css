@@ -18,8 +18,10 @@ body{
 
 .calculadora{
     background-color: #3b3a3a;
-    border-radius:6px;
+    border-radius:11px;
     width: 300px;
+    box-shadow: 0px 4px 4px #adacac;
+    overflow: hidden;
 }
 
 .resultado{
@@ -27,7 +29,45 @@ body{
     text-align: right;
     font-size:2rem;
     color:white;
-    
+}
+
+.botoes{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr); /*4 colunas, todas com a mesma fração de tamanho*/
+    grid-gap:1px;
+
+}
+
+.botoes button{
+    border:none;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+    font-size:1.5rem;
+    font-weight: 600;
+    color:white;
+    cursor:pointer;
+}
+
+.botoes .cinza-claro{
+    background-color: #868484;;
+}
+
+.botoes .cinza-escuro{
+    background-color:  #585858;
+}
+
+.botoes .laranja{
+    background-color:#f2a43b ;
+}
+
+.botoes .button__0{
+    grid-column: span 2;
+}
+
+button:active{
+    opacity: 0.8;
 }
 
 
