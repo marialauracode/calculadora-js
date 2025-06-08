@@ -1,0 +1,27 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /*inclui na largura e altura, o padding e o border. 
+    Assim, fica mais fácil de controlar o tamanho real dos elementos.
+    Evita que o conteúdo fique maior do que o esperado.*/
+}
+
+body {
+    height: 100vh; /*corresponde a 100% da página do body*/
+    display: flex;
+    justify-content: center;
+    align-items: center; /*deixa o elemento no centro da página*/
+    background-color: aliceblue;
+}
+
+.calculadora{
+    width: 300px;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.resultado{
+    background-color: gray;
+    padding:12px;
+    border-radius:8px
+}
