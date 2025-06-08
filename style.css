@@ -1,27 +1,26 @@
 * {
     margin:0;
     padding:0;
-    box-sizing: border-box; /*inclui na largura e altura, o padding e o border. 
-    Assim, fica mais fácil de controlar o tamanho real dos elementos.
-    Evita que o conteúdo fique maior do que o esperado.*/
+    box-sizing: border-box; /*Temos um controle maior com este comando
+    em relação aos tamanhos reais dos elementos.
+    -> Box-sizing:border-box evita que os elementos fiquem maiores do que o esperado.*/
+    font-family:Arial, Helvetica, sans-serif
 }
 
-body {
-    height: 100vh; /*corresponde a 100% da página do body*/
-    display: flex;
+body{
+    align-items: center;
+    display:flex;
     justify-content: center;
-    align-items: center; /*deixa o elemento no centro da página*/
+    height: 100vh; /*representa 100% da altura do navegador. Faz com que
+    o elemento fique centralizado na tela, respeitando o tamanho do container.*/
     background-color: aliceblue;
+
 }
 
-.calculadora{
-    width: 300px;
-    background-color: black;
-    border-radius: 8px;
-}
 
-.resultado{
-    background-color: gray;
-    padding:12px;
-    border-radius:8px
-}
+
+
+
+
+
+/*TORNAR RESPONSIVO*/
