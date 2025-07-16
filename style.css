@@ -14,6 +14,7 @@ body{
     height: 100vh; /*representa 100% da altura do navegador. Faz com que
     o elemento fique centralizado na tela, respeitando o tamanho do container.*/
     background-color: aliceblue;
+    width: 95%;
 }
 
 .calculadora{
