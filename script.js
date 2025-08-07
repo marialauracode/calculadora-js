@@ -44,4 +44,12 @@ function adicionaDigito(digito) {
     com vírgula no lugar do ponto*/
 }
 
-// 
+// 5º PASSO: Criar a função para definir o operador
+
+function operadorSelecionado(novoOperador) {
+    if (numAtual = true) { //se existe um número digitado no visor..
+        calculate(); // função que resolve uma operação anterior antes de prosseguir
+
+    }
+        
+}
