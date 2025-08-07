@@ -54,5 +54,7 @@ function operadorSelecionado(novoOperador) {
     }
 
     operador = novoOperador;
+
+    // 6º PASSO: Criar a função de cálculo
         
 }
