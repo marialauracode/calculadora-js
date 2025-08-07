@@ -33,11 +33,15 @@ function adicionaDigito(digito) {
              numAtual = 1 + 2
              numAtual = 12 */
     
-
     if (limpar == true) {
         numAtual = digito;
         limpar = false;
     } else {
         numAtual = numAtual + digito;
     }
+
+    atualizaResultado(false); /* chama a função para atualizar o visor e mostrar o número digitado,
+    com vírgula no lugar do ponto*/
 }
+
+// 
