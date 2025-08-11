@@ -48,7 +48,7 @@ function adicionaDigito(digito) {
 
 function operadorSelecionado(novoOperador) {
     if (numAtual = true) { //se existe um número digitado no visor..
-        calculate(); // função que resolve uma operação anterior antes de prosseguir
+        calcular(); // função que resolve uma operação anterior antes de prosseguir
         primeiroNum = numAtual = parseFloat.replace(",", ".");
         numAtual = "";
     }
@@ -56,5 +56,9 @@ function operadorSelecionado(novoOperador) {
     operador = novoOperador;
 
     // 6º PASSO: Criar a função de cálculo
+
+    function calcular() {
+        
+    }
         
 }
