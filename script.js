@@ -22,7 +22,7 @@ function atualizaResultado(limparVisor = false){
 // função para adicionar o dígito no visor
 
 function adicionaDigito(digito) {
-    if (adicionaDigito === "," && (numAtual.includes(",")) || !numAtual) {
+    if (digito === "," && (numAtual.includes(",")) || !numAtual) {
         return;
     }
 
@@ -47,7 +47,7 @@ function adicionaDigito(digito) {
 // 5º PASSO: Criar a função para definir o operador
 
 function operadorSelecionado(novoOperador) {
-    if (numAtual = true) { //se existe um número digitado no visor..
+    if (numAtual) { //se existe um número digitado no visor..
         calcular(); // função que resolve uma operação anterior antes de prosseguir
         primeiroNum = numAtual = parseFloat.replace(",", ".");
         numAtual = "";
@@ -145,18 +145,13 @@ function operadorSelecionado(novoOperador) {
                 limpaCalculadora();
             } else if (textoBotao === "±") { // INVERTE O SINAL
                 numAtual = (parseFloat(numAtual || primeiroNum) * -1).toString()
+                atualizaResultado();
+            } else if(textoBotao === "%") {
+                porcentagemCalculadora();
             }
 
 
-
-
-
-
-
-
-
-
-        } )
+        })
     }
         
 }
