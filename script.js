@@ -3,26 +3,37 @@
 const resultado = document.querySelector('.resultado');
 const botoes = document.querySelectorAll('.botoes button');
 
+// 2º PASSO: Criar as variáveis principais
+
 let numAtual = "";
 let primeiroNum = null;
 let operador = null;
-let limpar = false;
+let limpar = false; // quando TRUE, limpa o visor
+
+// 3º PASSO: Criar a função que atualiza o visor
 
 function atualizaResultado(limparVisor = false){
     resultado.innerHTML = limparVisor ? 0 : numAtual.replace(".", ",");
 }
 
+// 4º PASSO: Criar a função para adicionar dígitos 
+// função para adicionar o dígito no visor
+
 function adicionaDigito(digito) {
     if (digito === "," && (numAtual.includes(","))) {
         return;
     }
+
+    /* com o limpar = false, significa que não é para reiniciar o visor, 
+    então o dígito é acrescentado ao valor atual. 
+    exemplo: numAtual = numAtual + digito numAtual = 1 + 2 numAtual = 12 */
     if (limpar) {
         numAtual = digito;
         limpar = false;
     } else {
         numAtual += digito;
     }
-    atualizaResultado();
+    atualizaResultado(); // chama a função para atualizar o visor e mostrar o número digitado, com vírgula no lugar do ponto
 }
 
 function operadorSelecionado(novoOperador) {
