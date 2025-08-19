@@ -134,7 +134,18 @@ function operadorSelecionado(novoOperador) {
 
     botoes.forEach((button)) => {
         button.addEventListener("click", () => {
-            var textoBotao = button.innerHTML
+            var textoBotao = button.innerHTML;
+            if (/^ [0-9,] + $ /.test(textoBotao)) {
+                adicionaDigito(textoBotao);
+            } else if(["+", "-", "x", "÷"].includes(textoBotao)){
+                operadorSelecionado(textoBotao);
+            } else if(textoBotao === "=") {
+                calcular();
+            } else if(textoBotao === "C") {
+                limpaCalculadora();
+            } else if (textoBotao === "±") { // INVERTE O SINAL
+                numAtual = (parseFloat(numAtual || primeiroNum) * -1).toString()
+            }
 
 
 
