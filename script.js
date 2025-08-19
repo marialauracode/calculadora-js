@@ -12,7 +12,7 @@ let limpar = false; // quando TRUE, limpa o visor
 
 // 3º PASSO: Criar a função que atualiza o visor
 
-function atualizaResultado(limparVisor = false){
+function atualizaResultado(limparVisor = false) {
     resultado.innerHTML = limparVisor ? 0 : numAtual.replace(".", ",");
 }
 
@@ -53,19 +53,19 @@ function calcular() {
     let segundoNum = parseFloat(numAtual.replace(",", "."));
     let valorFinal;  // onde vou guardar o resultado da operação
 
-    switch(operador) {
-        case "+": 
-         valorFinal = primeiroNum + segundoNum;
-         break;
+    switch (operador) {
+        case "+":
+            valorFinal = primeiroNum + segundoNum;
+            break;
         case "-":
-         valorFinal = primeiroNum - segundoNum; 
-         break;
-        case "x": 
-         valorFinal = primeiroNum * segundoNum; 
-         break;
-        case "÷": 
-         valorFinal = primeiroNum / segundoNum; 
-         break;
+            valorFinal = primeiroNum - segundoNum;
+            break;
+        case "x":
+            valorFinal = primeiroNum * segundoNum;
+            break;
+        case "÷":
+            valorFinal = primeiroNum / segundoNum;
+            break;
     }
 
     if (valorFinal.toString().split(".")[1]?.length > 5) {
@@ -94,7 +94,7 @@ function limpaCalculadora() {
 
 function porcentagemCalculadora() {
     let resultado = parseFloat(numAtual) / 100;
-    if(["+", "-"].includes(operador)) {
+    if (["+", "-"].includes(operador)) {
         resultado = resultado * (primeiroNum || 1);
     }
     if (resultado.toString().split(".")[1]?.length > 5) {
@@ -113,16 +113,16 @@ botoes.forEach((button) => {
 
         if (/^[0-9,]+$/.test(textoBotao)) {
             adicionaDigito(textoBotao);
-        } else if(["+", "-", "x", "÷"].includes(textoBotao)) {
+        } else if (["+", "-", "x", "÷"].includes(textoBotao)) {
             operadorSelecionado(textoBotao);
-        } else if(textoBotao === "=") {
+        } else if (textoBotao === "=") {
             calcular();
-        } else if(textoBotao === "C") {
+        } else if (textoBotao === "C") {
             limpaCalculadora();
         } else if (textoBotao === "±") {
             numAtual = (parseFloat(numAtual || primeiroNum) * -1).toString();
             atualizaResultado();
-        } else if(textoBotao === "%") {
+        } else if (textoBotao === "%") {
             porcentagemCalculadora();
         }
     });
