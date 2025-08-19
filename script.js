@@ -45,11 +45,13 @@ function operadorSelecionado(novoOperador) {
     operador = novoOperador;
 }
 
+// 6º PASSO: Criar a função de cálculo
+
 function calcular() {
     if (operador == null || primeiroNum == null) return;
 
     let segundoNum = parseFloat(numAtual.replace(",", "."));
-    let valorFinal;
+    let valorFinal;  // onde vou guardar o resultado da operação
 
     switch(operador) {
         case "+": 
@@ -78,12 +80,17 @@ function calcular() {
     atualizaResultado();
 }
 
+// 7º PASSO: Criar a função de limpar a calculadora 
+// chamando quando o botão C é clicado
+
 function limpaCalculadora() {
     numAtual = "";
     primeiroNum = null;
     operador = null;
     atualizaResultado(true);
 }
+
+// 8º PASSO: Criar função de porcentagem
 
 function porcentagemCalculadora() {
     let resultado = parseFloat(numAtual) / 100;
@@ -96,6 +103,9 @@ function porcentagemCalculadora() {
     numAtual = resultado.toString();
     atualizaResultado();
 }
+
+// 9º PASSO: Ativar os botões com eventos de clique 
+// faz cada botão funcionar chamando a função certa
 
 botoes.forEach((button) => {
     button.addEventListener("click", () => {
