@@ -49,11 +49,13 @@ function adicionaDigito(digito) {
 function operadorSelecionado(novoOperador) {
     if (numAtual) { //se existe um número digitado no visor..
         calcular(); // função que resolve uma operação anterior antes de prosseguir
-        primeiroNum = numAtual = parseFloat.replace(",", ".");
+        primeiroNum = parseFloat(numAtual.replace(",", "."));
         numAtual = "";
     }
 
     operador = novoOperador;
+
+}
 
     // 6º PASSO: Criar a função de cálculo
 
@@ -132,10 +134,10 @@ function operadorSelecionado(novoOperador) {
     // 9º PASSO: Ativar os botões com eventos de clique
     // faz cada botão funcionar chamando a função certa
 
-    botoes.forEach((button)) => {
+    botoes.forEach((button) => {
         button.addEventListener("click", () => {
             var textoBotao = button.innerHTML;
-            if (/^ [0-9,] + $ /.test(textoBotao)) {
+            if (/^[0-9,]+$/.test(textoBotao)) {
                 adicionaDigito(textoBotao);
             } else if(["+", "-", "x", "÷"].includes(textoBotao)){
                 operadorSelecionado(textoBotao);
@@ -151,7 +153,6 @@ function operadorSelecionado(novoOperador) {
             }
 
 
-        })
-    }
+        });
+    });
         
-}
