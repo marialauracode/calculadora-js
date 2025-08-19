@@ -1,72 +1,76 @@
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box; /*Temos um controle maior com este comando
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*Temos um controle maior com este comando
     em relação aos tamanhos reais dos elementos.
     -> Box-sizing:border-box evita que os elementos fiquem maiores do que o esperado.*/
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     align-items: center;
-    display:flex;
+    display: flex;
     justify-content: center;
-    height: 100vh; /*representa 100% da altura do navegador. Faz com que
+    height: 100vh;
+    /*representa 100% da altura do navegador. Faz com que
     o elemento fique centralizado na tela, respeitando o tamanho do container.*/
     background-color: aliceblue;
     width: 95%;
 }
 
-.calculadora{
+.calculadora {
     background-color: #3b3a3a;
-    border-radius:11px;
+    border-radius: 11px;
     width: 300px;
     box-shadow: 0px 4px 4px #adacac;
     overflow: hidden;
 }
 
-.resultado{
-    padding:20px;
+.resultado {
+    padding: 20px;
     text-align: right;
-    font-size:2rem;
-    color:white;
+    font-size: 2rem;
+    color: white;
 }
 
-.botoes{
-    display:grid;
-    grid-template-columns: repeat(4, 1fr); /*4 colunas, todas com a mesma fração de tamanho*/
-    grid-gap:1px;
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*4 colunas, todas com a mesma fração de tamanho*/
+    grid-gap: 1px;
 
 }
 
-.botoes button{
-    border:none;
+.botoes button {
+    border: none;
     display: flex;
     justify-content: center;
     height: 60px;
     align-items: center;
-    font-size:1.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color:white;
-    cursor:pointer;
+    color: white;
+    cursor: pointer;
 }
 
-.botoes .cinza-claro{
-    background-color: #868484;;
+.botoes .cinza-claro {
+    background-color: #868484;
+    ;
 }
 
-.botoes .cinza-escuro{
-    background-color:  #585858;
+.botoes .cinza-escuro {
+    background-color: #585858;
 }
 
-.botoes .laranja{
-    background-color:#f2a43b ;
+.botoes .laranja {
+    background-color: #f2a43b;
 }
 
-.botoes .button__0{
+.botoes .button__0 {
     grid-column: span 2;
 }
 
-button:active{
+button:active {
     opacity: 0.8;
 }
