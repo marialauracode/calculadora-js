@@ -58,7 +58,94 @@ function operadorSelecionado(novoOperador) {
     // 6º PASSO: Criar a função de cálculo
 
     function calcular() {
-        
+        if (operador == null || primeiroNum == null) {
+            return;
+        }
+
+        var segundoNum = parseFloat(numAtual.replace(",","."));
+        var valorFinal; // onde vou guardar o resultado da operação
+
+        switch(operador) {
+            case "+":
+                valorFinal = primeiroNum + segundoNum;
+                break;
+
+            case "-":
+                valorFinal = primeiroNum - segundoNum;
+                break;
+
+            case "x":
+                valorFinal = primeiroNum * segundoNum;
+                break;
+
+            case "÷":
+                valorFinal = primeiroNum / segundoNum;
+                break;
+
+        default:
+            return;
+        }
+
+        if (valorFinal.toString().split(".")[1]?.length > 5) {
+            numAtual = parseFloat(valorFinal.toFixed(5));
+        } else {
+            numAtual = valorFinal.toString();
+        }
+
+        operador = null;
+        primeiroNum = null;
+        limpar = true;
+
+        atualizaResultado();
+    }
+
+    // 7º PASSO: Criar a função de limpar a calculadora
+    // chamando quando o botão C é clicado
+
+    function limpaCalculadora() {
+        numAtual = "";
+        primeiroNum = null;
+        operador = null;
+
+        atualizaResultado(true);
+    }
+
+    // 8º PASSO: Criar função de porcentagem
+
+    function porcentagemCalculadora() {
+        var resultado = parseFloat(numAtual) / 100;
+
+        if(["+", "-"].includes(operador)) {
+            resultado = resultado * (primeiroNum || 1);
+        }
+
+        if (resultado.toString().split(".")[1]?.length > 5) {
+            resultado = resultado.toFixed(5).toString();
+
+        } 
+
+        var numAtual = resultado.toString();
+        atualizaResultado();
+
+    }
+
+    // 9º PASSO: Ativar os botões com eventos de clique
+    // faz cada botão funcionar chamando a função certa
+
+    botoes.forEach((button)) => {
+        button.addEventListener("click", () => {
+            var textoBotao = button.innerHTML
+
+
+
+
+
+
+
+
+
+
+        } )
     }
         
 }
