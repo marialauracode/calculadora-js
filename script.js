@@ -1,3 +1,5 @@
+// 1º PASSO: Selecionando os elementos do HTML
+
 const resultado = document.querySelector('.resultado');
 const botoes = document.querySelectorAll('.botoes button');
 
